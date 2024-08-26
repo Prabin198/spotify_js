@@ -10,7 +10,8 @@
     box-sizing: border-box;
 }
 body{
-    background-color: antiquewhite;
+   background-image: url(hero.png);
+   background-size: cover;
 }
 .head{
     background-color: black;
@@ -63,7 +64,7 @@ body{
 }
 .list{
     
-    width: 40%;
+  
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -74,7 +75,7 @@ body{
     align-items: center;
     justify-content: flex-start;
     gap:10px;
-    background-color: rgb(32, 118, 193);
+    background-color: transparent;
     margin: 0px 8px;
     border-radius: 16px;
 
@@ -97,7 +98,7 @@ body{
 
 .buttom{
       background-color: black;
-      height: 110px;
+      height: 14.9vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -107,8 +108,9 @@ body{
       box-sizing: border-box;
 
 } 
-.buttom #progressRange{
-    width: 80vw;
+.buttom #myProgressBar{
+    width: 75vw;
+    cursor: pointer;
 }
 .icons{
     display: flex;
@@ -118,6 +120,7 @@ body{
    
     width: 180px;
     height: 40px;
+    color: white;
 }
 .icons:hover{
     border: 2px solid rgba(255, 255, 255,0.7);
@@ -126,6 +129,29 @@ body{
 }
 .buttom i{
     color: white;
-
-
+}
+.songsInfo{
+    left:10vh;
+    padding-top: 4vh;
+    width: 30%;
+    position: absolute;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: medium;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+}
+.songsInfo img{
+    width: 60px;
+    opacity: 0;
+    transition: opacity 0.4s  ease-in ;
+}
+.songsInfo h5{
+    display: flex;
+    justify-content: center;
+    align-self:first flex-end;
+    color: rgba(255, 255, 255,0.8);
 }
