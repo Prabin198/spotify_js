@@ -52,14 +52,49 @@ body{
    font-weight: 400;
    font-style: normal;
    background-image:url('heross.png');
-   background-repeat: none;
+
    background-size: cover;
-   background-position:center ;
+   background-position:center;
    border-radius: 12px;
    color: white;
+   gap: 15px;
    padding: 18px;
-
+   flex-direction: column;
 }
+.list{
+    
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.songsList{
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+    background-color: rgb(32, 118, 193);
+    margin: 0px 8px;
+    border-radius: 16px;
+
+    font-size: small;
+   padding: 0px 8px;
+}
+.songsList img{
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.timestamp{
+    padding: 0px 10px;
+    display: flex;
+    gap: 10px;
+}
+.timestamp i{
+    cursor: pointer;
+}
+
 .buttom{
       background-color: black;
       height: 110px;
