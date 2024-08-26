@@ -1,0 +1,96 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+/*
+*/
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+.head{
+    background-color: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    color:rgba(235, 235, 235,0.85);
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.head li{
+    padding:0px 12px
+}
+    
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    gap: 10px;
+    color: white;
+}
+
+.logo img{
+    height: 50px;
+
+}
+
+.container{
+   min-height: 69.3vh;
+   display: flex;
+   margin: 23px  auto;
+   width: 70%;
+   font-family: "Varela Round", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   background-image:url('heross.png');
+   background-repeat: none;
+   background-size: cover;
+   background-position:center ;
+   border-radius: 12px;
+   color: white;
+   padding: 18px;
+
+}
+.buttom{
+      background-color: black;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position:sticky;
+      flex-direction: column;
+      gap: 15px;
+      box-sizing: border-box;
+
+} 
+.buttom #progressRange{
+    width: 80vw;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+   
+    width: 180px;
+    height: 40px;
+}
+.icons:hover{
+    border: 2px solid rgba(255, 255, 255,0.7);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttom i{
+    color: white;
+
+
+}
