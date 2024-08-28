@@ -30,6 +30,8 @@ masterplay.addEventListener('click',()=>{
         masterplay.classList.add('fa-pause');
         gif.style.opacity=1;
         end.innerText=songs[songIndex].timestamp;
+        myProgressBar.value-0;
+        audioElement.currentTime=0;
        
     }
     else{
@@ -37,10 +39,7 @@ masterplay.addEventListener('click',()=>{
         masterplay.classList.remove('fa-pause');
         masterplay.classList.add('fa-play')
         gif.style.opacity=0;
-        if(songItemPlay.played){
-            songItemPlay.classList.remove('fa-play');
-            songItemPlay.classList.add('fa-pause');
-        }
+      
     }
 
 })
@@ -50,11 +49,11 @@ audioElement.addEventListener('timeupdate',()=>
 // console.log('timeupdate')
 let progress=parseInt((audioElement.currentTime/audioElement.duration)*100)
 myProgressBar.value=progress;
-})
+});
 myProgressBar.addEventListener('click',()=>{
     audioElement.currentTime=myProgressBar.value*audioElement.duration/100;
     
-})
+});
 const makeItemPlay=function(){
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((e)=>{
       
@@ -64,27 +63,28 @@ const makeItemPlay=function(){
         e.classList.add('fa-play');
 
         
-    })    
+    });   
     
-}
+};
 const songItemPlay=Array.from(document.getElementsByClassName('songItemPlay'))
 songItemPlay.forEach( (e)=>{
     e.addEventListener('click',(element)=>{
-        
-        songIndex=parseInt(element.target.id);
         makeItemPlay();
+        songIndex=parseInt(element.target.id);
      if(audioElement.paused||audioElement<=0){
-      
-    
-        element.target.classList.remove('fa-play');
-        element.target.classList.add('fa-pause')
-        audioElement.src=`songs/${songIndex+1}.mp3`;
+        masterName.innerText=songs[songIndex].songName;
+        audioElement.src=songs[songIndex].filePath;
         audioElement.currentTime=0;
         audioElement.play();
+        element.target.classList.remove('fa-play');
+        element.target.classList.add('fa-pause');
         masterplay.classList.remove('fa-play');
-        masterplay.classList.add('fa-pause')
+        masterplay.classList.add('fa-pause');
+        gif.style.opacity=1;
+        end.innerText=songs[songIndex].timestamp;
+        audioElement.currentTime=0;
      }
-     else if(audioElement.played){
+     else{
         audioElement.pause();
         element.target.classList.remove('fa-pause');
         element.target.classList.add('fa-play')
@@ -92,26 +92,23 @@ songItemPlay.forEach( (e)=>{
         masterplay.classList.add('fa-play')
        
      }
-        gif.style.opacity=1;
-        masterName.innerText=songs[songIndex].songName;
-        end.innerText=songs[songIndex].timestamp;
-        audioElement.currentTime=0;
-    })
-})
+        
+        
+    });
+});
 
 document.getElementById('previous').addEventListener('click',()=>{
     if(songIndex<=0){
-        songIndex=10;
-        audioElement.src=`songs/${songIndex}.mp3`;
-        audioElement.play();
+        songIndex=songs.length-1;
     }
   
     else{
-        songIndex -=1
-        audioElement.src=`songs/${songIndex}.mp3`;
+      songIndex -=1
+    }
+      audioElement.src=songs[songIndex].filePath;
       audioElement.currentTime=0;
-      masterName.innerText=songs[songIndex-1].songName;
-      end.innerText=songs[songIndex-1].timestamp;
+      masterName.innerText=songs[songIndex].songName;
+      end.innerText=songs[songIndex].timestamp;
       audioElement.play();
       masterplay.classList.remove('fa-play');
       masterplay.classList.add('fa-pause')
@@ -119,25 +116,25 @@ document.getElementById('previous').addEventListener('click',()=>{
       
     }
     
-})
+);
 document.getElementById('next').addEventListener('click',()=>{
-    if(songIndex>9){
+    if(songIndex>=songs.length-1){
         songIndex=0;
-        audioElement.scr=`songs/1.mp3`
-        audioElement.play();
+       
     }
     else{
         songIndex +=1
-        audioElement.src=`songs/${songIndex}.mp3`;
+    }
+        audioElement.src=songs[songIndex].filePath;
        audioElement.currentTime=0;
       
       audioElement.play();
       masterplay.classList.remove('fa-play');
       masterplay.classList.add('fa-pause')
       gif.style.opacity=1;
-      masterName.innerText=songs[songIndex -1].songName;
+      masterName.innerText=songs[songIndex].songName;
       
       end.innerText=songs[songIndex-1].timestamp;
     
-    }
-})
+    
+});
