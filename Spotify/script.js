@@ -29,6 +29,7 @@ masterplay.addEventListener('click',()=>{
         masterplay.classList.remove('fa-play');
         masterplay.classList.add('fa-pause')
         gif.style.opacity=1;
+        end.innerText=songs[songIndex].timestamp;
     }
     else{
         audioElement.pause();
