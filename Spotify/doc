@@ -1,0 +1,13 @@
+ e.addEventListener('click',(element)=>{
+      makeItemPlay();
+      songIndex=parseInt(element.target.id);
+      element.target.classList.remove('fa-play');
+      element.target.classList.add('fa-pause')
+      audioElement.src=`songs/${songIndex+1}.mp3`;
+      audioElement.currentTime=0;
+      audioElement.play();
+      masterplay.classList.remove('fa-play');
+      masterplay.classList.add('fa-pause')
+      gif.style.opacity=1;
+      masterName.innerText=songs[songIndex].songName;
+      end.innerText=songs[songIndex].timestamp;
