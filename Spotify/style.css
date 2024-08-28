@@ -10,7 +10,9 @@
     box-sizing: border-box;
 }
 body{
-   background-image: url(hero.png);
+    background-image: url('back.jpg');
+    background-position: center;
+
    background-size: cover;
 }
 .head{
@@ -61,6 +63,7 @@ body{
    gap: 15px;
    padding: 18px;
    flex-direction: column;
+   box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.85);
 }
 .list{
     
@@ -104,15 +107,46 @@ body{
       justify-content: center;
       position:sticky;
       flex-direction: column;
-      gap: 15px;
+     
+      padding-bottom: 0px;
+      margin-bottom: 0px;
       box-sizing: border-box;
 
 } 
 .buttom #myProgressBar{
     width: 75vw;
     cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+
+}
+#myProgressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: rgb(0, 0, 0);
+
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: grab;
+    border: 3px solid rgb(22, 189, 231);
+    box-shadow: -607px 0 0 600px rgba(187, 18, 221, 0.75);
+}
+
+.timingControl{
+    height: 8px;
+    margin-top: 4px;
+    width: 72vw;
+    color:rgba(235, 235, 235,0.85);
+    font-size: 10px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Varela Round", sans-serif;
 }
 .icons{
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -123,7 +157,8 @@ body{
     color: white;
 }
 .icons:hover{
-    border: 2px solid rgba(255, 255, 255,0.7);
+
+    border: 2px solid rgba(196, 54, 151, 0.7);
     border-radius: 10px;
     cursor: pointer;
 }
