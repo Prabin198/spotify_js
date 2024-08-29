@@ -7,12 +7,12 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+  
 }
 body{
     background-image: url('back.jpg');
     background-position: center;
-
+    
    background-size: cover;
 }
 .head{
@@ -151,7 +151,7 @@ body{
     justify-content: center;
     gap: 15px;
     align-items: center;
-   
+    box-sizing: border-box;
     width: 180px;
     height: 40px;
     color: white;
@@ -190,7 +190,26 @@ body{
     align-self:first flex-end;
     color: rgba(255, 255, 255,0.8);
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:635px){
+    .container{
+        min-height: 69.3vh;
+        display: flex;
+        margin: 23px  auto;
+        width: 70%;
+        font-family: "Varela Round", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-image:url('heross.png');
+     
+        background-size:cover;
+        background-position:90% 50%;
+        border-radius: 12px;
+        color: white;
+        gap: 15px;
+        padding: 18px;
+        flex-direction: column;
+        box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.85);
+     }
     .buttom .songsInfo{
         left:10px;
         padding-top: 4vh;
@@ -221,4 +240,21 @@ body{
         border-radius: 10px;
         cursor: pointer;
     }
+
 } 
+@media screen and (max-width:1464px) {
+    .buttom{
+        background-color: black;
+        height: 15.5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:sticky;
+        flex-direction: column;
+       
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+  
+  } 
+}
