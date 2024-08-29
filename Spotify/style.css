@@ -190,3 +190,35 @@ body{
     align-self:first flex-end;
     color: rgba(255, 255, 255,0.8);
 }
+@media screen and (max-width:450px){
+    .buttom .songsInfo{
+        left:10px;
+        padding-top: 4vh;
+        width: 30%;
+        position: absolute;
+        color:rgb(255, 255, 255);
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        font-size: small;
+        font-family: "Varela Round", sans-serif;
+        font-weight: 400;
+    }
+    .icons{
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+       
+        width: 150px;
+        height: 40px;
+        color: white;
+    }
+    .icons:hover{
+    
+        border: 2px solid rgba(196, 54, 151, 0.7);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+} 

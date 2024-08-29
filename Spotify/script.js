@@ -56,16 +56,12 @@ myProgressBar.addEventListener('click',()=>{
 });
 const makeItemPlay=function(){
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((e)=>{
-      
-      
-     
-        e.classList.remove('fa-pause')
-        e.classList.add('fa-play');
-
-        
-    });   
+            
+            e.classList.remove('fa-pause');
+            e.classList.add('fa-play')
+    }
     
-};
+)};
 const songItemPlay=Array.from(document.getElementsByClassName('songItemPlay'))
 songItemPlay.forEach( (e)=>{
     e.addEventListener('click',(element)=>{
