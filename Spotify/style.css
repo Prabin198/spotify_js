@@ -47,7 +47,7 @@ body{
 }
 
 .container{
-   min-height: 69.3vh;
+   min-height: 64.4vh;
    display: flex;
    margin: 23px  auto;
    width: 70%;
@@ -162,6 +162,10 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
+#shuffle{
+    height: 14px;
+    width: 16px;
+}
 .buttom i{
     color: white;
 }
@@ -251,7 +255,6 @@ body{
         justify-content: center;
         position:sticky;
         flex-direction: column;
-       
         padding-bottom: 0px;
         margin-bottom: 0px;
         box-sizing: border-box;

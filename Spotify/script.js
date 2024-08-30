@@ -55,18 +55,18 @@ myProgressBar.addEventListener('click',()=>{
     
 });
 const makeItemPlay=function(){
-    Array.from(document.getElementsByClassName('songItemPlay')).forEach((e)=>{
-            
-            e.classList.remove('fa-pause');
-            e.classList.add('fa-play')
+    Array.from(document.getElementsByClassName('songItemPlay'))
+    .forEach((e)=>{
+       e.classList.remove('fa-pause');
+       e.classList.add('fa-play');
     }
-    
-)};
+)}
 const songItemPlay=Array.from(document.getElementsByClassName('songItemPlay'))
 songItemPlay.forEach( (e)=>{
     e.addEventListener('click',(element)=>{
         makeItemPlay();
         songIndex=parseInt(element.target.id);
+        
      if(audioElement.paused||audioElement<=0){
         masterName.innerText=songs[songIndex].songName;
         audioElement.src=songs[songIndex].filePath;
@@ -93,7 +93,8 @@ songItemPlay.forEach( (e)=>{
     });
 });
 
-document.getElementById('previous').addEventListener('click',()=>{
+const previous=document.getElementById('previous')
+previous.addEventListener('click',()=>{
     if(songIndex<=0){
         songIndex=songs.length-1;
     }
@@ -113,7 +114,8 @@ document.getElementById('previous').addEventListener('click',()=>{
     }
     
 );
-document.getElementById('next').addEventListener('click',()=>{
+const next=document.getElementById('next');
+next.addEventListener('click',()=>{
     if(songIndex>=songs.length-1){
         songIndex=0;
        
@@ -132,5 +134,17 @@ document.getElementById('next').addEventListener('click',()=>{
       
       end.innerText=songs[songIndex-1].timestamp;
     
-    
-});
+})
+document.getElementById('shuffle').addEventListener('click',(e)=>{
+    index=parseInt(Math.random()*9);
+    if(e.target.classList=='fa-solid fa-shuffle'){
+        
+e.target.classList.remove('fa-shuffle');
+e.target.classList.add('fa-repeat');
+
+}
+else{
+    e.target.classList.remove('fa-repeat');
+    e.target.classList.add('fa-shuffle');
+}
+})
