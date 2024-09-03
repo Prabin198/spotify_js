@@ -78,11 +78,13 @@ masterplay.addEventListener("click", () => {
     end.innerText = songs[songIndex].timestamp;
     myProgressBar.value - 0;
     audioElement.currentTime = 0;
+    makeItemPlay();
   } else {
     audioElement.pause();
     masterplay.classList.remove("fa-pause");
     masterplay.classList.add("fa-play");
     gif.style.opacity = 0;
+    makeItemPlay();
   }
 });
 
