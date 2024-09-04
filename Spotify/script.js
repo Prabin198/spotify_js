@@ -115,6 +115,7 @@ songItemPlay.forEach((e) => {
   
       // Check if the same song is clicked again
       if (songIndex === clickedSongIndex) {
+        console.log("sonsg",songIndex)
         if (audioElement.paused) {
           // If the song is paused, play it
           audioElement.play();

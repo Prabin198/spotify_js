@@ -227,6 +227,9 @@ body{
         font-family: "Varela Round", sans-serif;
         font-weight: 400;
     }
+   .songsInfo img{
+        width: 35px;
+    }
     .icons{
         margin-top: 15px;
         display: flex;
