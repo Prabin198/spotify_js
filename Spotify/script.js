@@ -189,7 +189,6 @@ next.addEventListener("click", () => {
   end.innerText = songs[songIndex - 1].timestamp;
 });
 document.getElementById("shuffle").addEventListener("click", (e) => {
-  index = parseInt(Math.random() * 9);
   if (e.target.classList == "fa-solid fa-shuffle") {
     e.target.classList.remove("fa-shuffle");
     e.target.classList.add("fa-repeat");

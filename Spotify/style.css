@@ -229,6 +229,9 @@ body{
     }
    .songsInfo img{
         width: 35px;
+        opacity: 0;
+        transition: opacity 0.4s  ease-in ;
+
     }
     .icons{
         margin-top: 15px;
